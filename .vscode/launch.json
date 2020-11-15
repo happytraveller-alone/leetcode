@@ -1,0 +1,64 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug_CDP",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "internalConsoleOptions":"openOnFirstSessionStart",
+            //"externalConsole": true,
+            //"console":"integratedTerminal",
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:\\DirectProgramFile\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "g++",
+            //"console":"internalConsole"
+        },
+        {
+            "name": "Debug_Py",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",//${fileDirname}\\${fileBasenameNoExtension}.exe
+            "args": [],
+            "stopOnEntry": false,
+            "cwd": "${workspaceFolder}",
+            "env": {},
+            //"externalConsole": false,
+            "pythonPath": "D:\\DirectProgramFile\\anaconda3\\python.exe",
+            "envFile": "${workspaceRoot}/.env",
+            "redirectOutput": true,
+            "preLaunchTask":"python",
+            "console":"internalConsole"
+        },
+        {
+            "name": "CMake_test",
+            "type": "cppdbg",
+            "request": "launch",
+            "miDebuggerPath": "D:\\DirectProgramFile\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\gdb.exe",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}",//${fileDirname}\\${fileBasenameNoExtension}.exe
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            //"preLaunchTask":"python",
+            "MIMode": "gdb",
+            "preLaunchTask": "g++",
+            "internalConsoleOptions":"openOnFirstSessionStart",
+        }
+    ]
+}
